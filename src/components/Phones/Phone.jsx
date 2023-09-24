@@ -5,8 +5,6 @@ const Phone = ({phone}) => {
 
     const {id, phone_name, brand_name, rating, price, image} = phone || {}
 
-    
-
     return (
         <div>
             <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
