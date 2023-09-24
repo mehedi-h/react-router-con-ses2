@@ -3,12 +3,15 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../pages/Home/Home";
 import Favourites from "../pages/Favourites/Favourites";
 import Login from "../pages/Login/Login";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PhoneDetails from "../pages/PhoneDetails/PhoneDetails";
 
 
 const myCreateRoute = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -22,6 +25,10 @@ const myCreateRoute = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/phones/:id",
+                element: <PhoneDetails></PhoneDetails>
             }
         ]
     }
